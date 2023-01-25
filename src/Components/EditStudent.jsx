@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import {Link, useLocation, useNavigate} from "react-router-dom"
 import "./AddNewStudent.css"
 import { StudentContext } from './Context'
-import Students from './Students'
+// import Students from './Students'
 
 const EditStudent = () => {
     const context=useContext(StudentContext)
@@ -26,7 +26,7 @@ const EditStudent = () => {
                 }
             );
         }
-    },[context])
+    },[context]);
 
     const handleChange = (event) =>
     {
@@ -39,20 +39,20 @@ const EditStudent = () => {
        context.updateFunction(
         (prevObj)=>{
             prevObj[index] = newObj;
-            return (prevObj)
+            return (prevObj)  //updated prevobj is the new state
         }
        );
        navigate('/');
     }
-    const handleDelete = (id) =>{
-        console.log(context.entries[index])
-        const value=context.entries[index]
-        value.map(function(e){
-            return e.id
-         }).indexOf(id);
-        value.splice(value,1)
-        navigate('/');
-    }
+    // const handleDelete = (id) =>{
+    //     console.log(context.entries[index])
+    //     const value=context.entries[index]
+    //     value.map(function(e){
+    //         return e.id
+    //      }).indexOf(id);
+    //     value.splice(value,1)
+    //     navigate('/');
+    // }
 
   return (
     <div className='addnewstudentform'>
@@ -79,7 +79,7 @@ const EditStudent = () => {
                 {/* <label htmlFor="batch" className="placeholder">Batch</label> */}
             </div>
             <Link to="/student"><button className="submit-btn" onClick={handleUpdate} type='submit'>Update</button></Link>
-            <Link to="/student"><button  className="cancel-btn" onclick={handleDelete} type='cancel'>Cancel</button></Link>
+            <Link to="/student"><button  className="cancel-btn" type='cancel'>Cancel</button></Link>
         </form>
     </div> 
   )

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import './Students.css'
-import Context from './Context'
+// import Context from './Context'
 import { StudentContext } from './Context'
 
 

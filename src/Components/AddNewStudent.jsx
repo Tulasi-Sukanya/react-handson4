@@ -1,7 +1,7 @@
-import React,{useContext,useState,useEffect} from 'react'
-import {Link, useNavigate,useLocation} from "react-router-dom"
+import React from 'react'
+import {Link} from "react-router-dom"
 import "./AddNewStudent.css"
-import { StudentContext } from './Context'
+// import { StudentContext } from './Context'
 
 const AddNewStudent = () => {
   return (
