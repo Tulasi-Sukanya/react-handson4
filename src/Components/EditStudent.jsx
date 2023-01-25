@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext} from 'react'
 import {Link, useLocation, useNavigate} from "react-router-dom"
 import "./AddNewStudent.css"
 import { StudentContext } from './Context'
@@ -17,16 +17,16 @@ const EditStudent = () => {
         course:context.entries[index].course,
         batch:context.entries[index].batch,
     }
-    useEffect(()=>{
-        return()=>{
-            context.updateFunction(
-                (prevObj)=>{
-                    prevObj[index]=newObj;
-                    return(prevObj);
-                }
-            );
-        }
-    },[context]);
+    // useEffect(()=>{
+    //     return()=>{
+    //         context.updateFunction(
+    //             (prevObj)=>{
+    //                 prevObj[index]=newObj;
+    //                 return(prevObj);
+    //             }
+    //         );
+    //     }
+    // },[context]);
 
     const handleChange = (event) =>
     {
