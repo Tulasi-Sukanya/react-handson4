@@ -17,17 +17,6 @@ const EditStudent = () => {
         course:context.entries[index].course,
         batch:context.entries[index].batch,
     }
-    // useEffect(()=>{
-    //     return()=>{
-    //         context.updateFunction(
-    //             (prevObj)=>{
-    //                 prevObj[index]=newObj;
-    //                 return(prevObj);
-    //             }
-    //         );
-    //     }
-    // },[context]);
-
     const handleChange = (event) =>
     {
         newObj[event.target.name] = event.target.value;
